@@ -1,8 +1,5 @@
 <!doctype html>
-<!-- The DOCTYPE declaration above will set the     -->
-<!-- browser's rendering engine into                -->
-<!-- "Standards Mode". Replacing this declaration   -->
-<!-- with a "Quirks Mode" doctype is not supported. -->
+
 
 <html>
   <head>
@@ -14,35 +11,26 @@
     <!--                                                               -->
     <link type="text/css" rel="stylesheet" href="JsQRScanner.css">
 
-    <!--                                           -->
-    <!-- Any title is fine                         -->
-    <!--                                           -->
-    <title>Pupan</title>
+  
+    <title>Pupan Scanner </title>
     
     <!--                                           -->
     <!-- This script loads your compiled module.   -->
-    <script type="text/javascript" src="./jsPretty/jsqrscanner.nocache.js"></script>
+    <script type="text/javascript" src="file:///C:/d/projekty/jsQRScanner/war/jsqrscanner/jsqrscanner.nocache.js"></script>
   </head>
+
   <body>
 
-    <div class="row-element-set row-element-set-QRScanner">
     <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
     <noscript>
-      <div class="row-element-set error_message">
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
         Your web browser must have JavaScript enabled
         in order for this application to display correctly.
       </div>
     </noscript>
-    <div class="row-element-set error_message" id="secure-connection-message" style="display: none;" hidden >
-     
-    </div>
-    <script> 
-    if (location.protocol != 'https:') { 
-      document.getElementById('secure-connection-message').style='display: block';
-      }
-      </script>  
 
-      <h1>QR Scanner </h1>
+    <div class="row-element-set row-element-set-QRScanner">
+      <h1>JsQRScanner example</h1>
       <div class="row-element">
         <div class="FlexPanel detailsPanel QRScannerShort">
           <div class="FlexPanel shortInfoPanel">
@@ -65,7 +53,7 @@
             </div>
           </div>
           <div class="FlexPanel form-field-input-panel">
-            <textarea id="scannedTextMemo" class="textInput form-memo form-field-input textInput-readonly" rows="3" >
+            <textarea id="scannedTextMemo" class="textInput form-memo form-field-input textInput-readonly" rows="3" readonly>
             </textarea>
           </div>
         </div>
@@ -76,13 +64,13 @@
             </div>
           </div>
           <div class="FlexPanel form-field-input-panel">
-            <textarea id="scannedTextMemoHist" class="textInput form-memo form-field-input textInput-readonly" value="" rows="6" >
+            <textarea id="scannedTextMemoHist" class="textInput form-memo form-field-input textInput-readonly" value="" rows="6" readonly>
             </textarea>
           </div>
         </div>
       </div>
       <br>
-      
+      <a style="font-weight: bold;" href="https://github.com/jbialobr/JsQRScanner">The source code is hosted on GitHub</a>
     </div>
   <script type="text/javascript">
     function onQRCodeScanned(scannedText)
